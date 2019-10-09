@@ -1,5 +1,13 @@
 
 export default {
+    /**PRINCIPAIS */
+    default:'#333a46',
+    primary: '#006aff',
+    success: '#1adf79',
+    info: '#00b8ff',
+    danger:'#f83333',
+    warning: '#ffc02a',
+    /**DEMAIS CORES */
     default:'#333a46',
     acqua: '#00dec3',
     acqua100: '#b8f6eb',

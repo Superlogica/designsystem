@@ -9,7 +9,7 @@ const setColor = (hexa) =>{
         });    
         console.log(total);
         if(total/3 >128){
-            return "#000000";
+            return "#1e232c";
         }else{
             return "#FFFFFF";
         }
