@@ -1,5 +1,13 @@
 import Size from "../resources/size";
 const ButtonSize = (props) => {
+
+    let sizeButton = "medium";
+
+    if (!Size[props.size]) {
+        props.size = sizeButton;
+    }
+
+
     let jontas = `
         cursor:pointer;
         transition:0.2s all;
