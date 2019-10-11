@@ -1,7 +1,7 @@
 export default {
     small: {
         padding: "8px 19px",
-        fontFamily: "ProximaNova",
+        fontFamily: "proxima-nova",
         fontSize: "1rem",
         fontWeight: "bold",
         fontStyle: "normal",
@@ -14,7 +14,7 @@ export default {
     },
     medium: {
         padding: "12px 23px",
-        fontFamily: "ProximaNova",
+        fontFamily: "proxima-nova",
         fontSize: "1rem",
         fontWeight: "600",
         fontStyle: "normal",
@@ -27,7 +27,7 @@ export default {
     },
     large: {
         padding: "12px 19px",
-        fontFamily: "ProximaNova",
+        fontFamily: "proxima-nova",
         fontSize: "1.25rem",
         fontWeight: "bold",
         fontStyle: "normal",
@@ -40,7 +40,7 @@ export default {
     },
     xlarge: {
         padding: "12px 22.5px",
-        fontFamily: "ProximaNova",
+        fontFamily: "proxima-nova",
         fontSize: "1.5rem",
         fontWeight: "bold",
         fontStyle: "normal",

@@ -26,35 +26,10 @@ class App extends React.Component {
 
     return (
       <Container>
-        <div className="App">
+        <div className="App">             
               <Row>
                 <Col>
-                  <Button style={marginTeste} type="ghost" size="small" color="red" onClick={this.handleSubmit}>Enviar</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button size="small" style={marginTeste} onClick={this.handleSubmit}>Enviar</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="success" type="outline" size="small" style={marginTeste} onClick={this.handleSubmit}>Enviar</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="info" size="medium" style={marginTeste} onClick={this.handleSubmit}>Enviar</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="danger" size="large" style={marginTeste} onClick={this.handleSubmit}>Enviar</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="yellow" size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Enviar</Button>
+                  <Button color="jao" size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
                 </Col>
               </Row>
             <p>

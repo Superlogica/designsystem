@@ -17,7 +17,6 @@ const ButtonSize = (props) => {
         border-radius: ${props.size ? Size[props.size].borderRadius : Size.medium.borderRadius};
         min-width: ${props.size ? Size[props.size].minWidth : Size.medium.minWidth};
     `;
-
     return jontas;
 }
 

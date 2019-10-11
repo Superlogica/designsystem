@@ -1,39 +1,7 @@
 import Colors from "../resources/color";
+import fontColor from "../../../resources/fontColor";
+import newColor from "../../../resources/hoverColor";
 /** import Gradient from "../resources/gradient"; NUNCA VAO USAR*/
-
-const setFontColor = (hexa) => {
-    let total = 0;
-    hexa = hexa.replace('#', '');
-    let rgb = hexa.match(/.{1,2}/g);
-    rgb.map((jontas) => {
-        jontas = parseInt(jontas, 16);
-        total = total + jontas
-        return true;
-    });
-    if (total / 3 > 120) {
-        return "#1e232c";
-    } else {
-        return "#FFFFFF";
-    }
-}
-
-const bgDefault = (color) =>{
-    let arrColors = Object.keys(Colors);
-    let colorReturn = color;
-    let index = arrColors.findIndex((col)=>{
-        let ret = -1;
-        if(col===color){
-            ret = col;
-        }
-        return ret;
-    })
-    if(index !== -1){
-        if(typeof arrColors[index - 1] !== "undefined"){
-            colorReturn = arrColors[index - 1];
-        }
-    }
-    return colorReturn;
-}
 
 const ButtonColor = (type,color)=>{
     /**valida se a props bgColor foi setada */
@@ -48,33 +16,31 @@ const ButtonColor = (type,color)=>{
                 }
                `;
        break;
-
        case("outline"):
        style = `background:transparent;
                 border:1px solid ${Colors[color]}
                 color: ${Colors[color]};
                 &:hover{
                     background:${Colors[color]};
-                    color:${setFontColor(Colors[color])};
+                    color:${fontColor(Colors[color])};
                   }
                `;
        break;
-
        default:
         style = `background-color:${Colors.default};
-                 color: ${setFontColor(Colors.default)};
+                 color: ${fontColor(Colors.default)};
                  border:1px solid transparent;
                  &:hover{
-                     background-color: ${bgDefault("default")}
+                     background-color: ${Colors.neutral700};
                  }
                     `;
     
         if(color) {
             style = `background-color:${Colors[color]};
-                     color: ${setFontColor(Colors[color])};
+                     color: ${fontColor(Colors[color])};
                      border:1px solid transparent;
                      &:hover{
-                        background-color: ${bgDefault(color)}
+                        background-color: ${newColor(Colors[color])}
                      }
                     `;
             if(color.search('gradient')>-1) {
@@ -82,12 +48,8 @@ const ButtonColor = (type,color)=>{
             }
         }
         break;
-
-
     }
-
     return style;
-
 }
 
 const ButtonType = (props) => {
@@ -98,14 +60,15 @@ const ButtonType = (props) => {
     
     let color = "default";
     if(props.color) {
-        color = props.color;
+        color = null;
+        if(Colors[props.color]) {
+            color = props.color;
+        }
     }
-
     let style = ButtonColor(type,color);
-
     let jontas = `
         ${style}
-    `
+    `;
     return jontas;
 }
 
