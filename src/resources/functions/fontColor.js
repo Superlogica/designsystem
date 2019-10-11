@@ -7,7 +7,8 @@ const setColor = (hexa) =>{
             total = total + jontas
             return jontas;
         });    
-        if(total/3 >128){
+        let media = total / 3;
+        if(media >150){
             return "#1e232c";
         }else{
             return "#FFFFFF";

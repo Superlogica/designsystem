@@ -1,6 +1,6 @@
 import Colors from "../resources/color";
-import fontColor from "../../../resources/fontColor";
-import newColor from "../../../resources/hoverColor";
+import fontColor from "../../../resources/functions/fontColor";
+import newColor from "../../../resources/functions/hoverColor";
 /** import Gradient from "../resources/gradient"; NUNCA VAO USAR*/
 
 const ButtonColor = (type,color)=>{
@@ -68,6 +68,11 @@ const ButtonType = (props) => {
     let style = ButtonColor(type,color);
     let jontas = `
         ${style}
+        &:disabled{
+          background:${Colors.neutral300};
+          cursor: not-allowed;
+          color: ${Colors.neutral900}
+        }
     `;
     return jontas;
 }

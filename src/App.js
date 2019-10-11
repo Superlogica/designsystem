@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Row, Col } from 'react-grid-system';
 import Button from './components/Button/Button';
 import './App.css';
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -29,9 +28,37 @@ class App extends React.Component {
         <div className="App">             
               <Row>
                 <Col>
-                  <Button color="jao" size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                  <Button color="purple" fullWidth disable size="small" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+                <Col>
+                  <Button color="purple" fullWidth size="small" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
                 </Col>
               </Row>
+              <Row>
+                <Col>
+                  <Button color="purple" fullWidth disable size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+                <Col>
+                  <Button color="purple" fullWidth size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Button color="purple" fullWidth disable size="large" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+                <Col>
+                  <Button color="purple" fullWidth size="large" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <Button color="purple" fullWidth disable size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+                <Col>
+                  <Button color="purple" fullWidth size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+                </Col>
+              </Row>
+              
             <p>
               Decimal: { this.props.decimalColor }
             </p>

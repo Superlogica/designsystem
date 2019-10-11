@@ -1,3 +1,4 @@
+//"#IFNDEF MOBILE";
 const newColor = (color) =>{
     let total = 0;
     let hexa = color.replace('#', '');
@@ -28,3 +29,4 @@ const newColor = (color) =>{
 }
 
 export default newColor;
+//"#ENDIF";

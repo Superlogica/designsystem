@@ -16,6 +16,7 @@ const ButtonSize = (props) => {
         padding: ${props.size ? Size[props.size].padding : Size.medium.padding};
         border-radius: ${props.size ? Size[props.size].borderRadius : Size.medium.borderRadius};
         min-width: ${props.size ? Size[props.size].minWidth : Size.medium.minWidth};
+        text-rendering: optimizeLegibility;
     `;
     return jontas;
 }
