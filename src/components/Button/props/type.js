@@ -13,6 +13,7 @@ const ButtonColor = (type,color,shadow = "")=>{
                 color: ${Colors[color]};
                 &:hover{
                     background:rgba(0,0,0,0.03);
+                    ${shadow ? 'transform: translateY(-2px);':""}
                 }
                `;
        break;
@@ -56,28 +57,32 @@ const ButtonColor = (type,color,shadow = "")=>{
 }
 
 const ButtonType = (props) => {
-    let type = "solid";
-    if(props.type) {
-        type = props.type;
-    }
-    
-    let color = "default";
-    if(props.color) {
-        color = null;
-        if(Colors[props.color]) {
-            color = props.color;
+    if(!props.gradient){
+        let type = "solid";
+        if(props.type) {
+            type = props.type;
         }
-    }
-    let style = props.shadow ? ButtonColor(type,color,props.shadow) : ButtonColor(type,color);
-    let jontas = `
-        ${style}
-        &:disabled{
-          background:${Colors.neutral300};
-          cursor: not-allowed;
-          color: ${Colors.neutral900}
+        
+        let color = "default";
+        if(props.color) {
+            color = null;
+            if(Colors[props.color]) {
+                color = props.color;
+            }
         }
-    `;
-    return jontas;
+        let style = props.shadow ? ButtonColor(type,color,props.shadow) : ButtonColor(type,color);
+        let btnType = `
+            ${style}
+            &:disabled{
+              background:${Colors.neutral300};
+              cursor: not-allowed;
+              color: ${Colors.neutral900}
+            }
+        `;
+        return btnType;
+
+    }
+    return false;
 }
 
 export default ButtonType;

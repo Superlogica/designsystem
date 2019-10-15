@@ -1,26 +1,26 @@
 const newColor = (color) =>{
     let total = 0;
-    let hexa = color.replace('#', '');
+    const hexa = color.replace('#', '');
     let rgb = hexa.match(/.{1,2}/g);
-    rgb.map((jontas) => {
-        jontas = parseInt(jontas, 16);
-        total = total + jontas
+    rgb.map((cores) => {
+        cores = parseInt(cores, 16);
+        total = total + cores
         return false;
     });
-    let media = total / 3;
+    const media = total / 3;
 
     //GERANDO O HOVER - RGB TO HEXADECIMAL
-    var hover = rgb.map((jonta) => {
-        jonta = parseInt(jonta, 16);
-        jonta = (jonta>=235?jonta: jonta + 20).toString(16);
-        return jonta;
+    let hover = rgb.map((cores2) => {
+        cores2 = parseInt(cores2, 16);
+        cores2 = (cores2>=235?cores2: cores2 + 20).toString(16);
+        return cores2;
     });
 
     if (media > 128) { 
-        hover = rgb.map((jonta) => {
-            jonta = parseInt(jonta, 16);
-            jonta = (jonta <= 20 ? jonta : jonta - 20).toString(16);
-            return jonta;
+        hover = rgb.map((cores2) => {
+            cores2 = parseInt(cores2, 16);
+            cores2 = (cores2 <= 20 ? cores2 : cores2 - 20).toString(16);
+            return cores2;
         });
     }
 

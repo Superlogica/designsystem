@@ -1,9 +1,10 @@
 import Styled from 'styled-components';
+import ProximaNova from "../../resources/fonts/proximaNova";
 import ButtonSize from "./props/size";
 import ButtonType from "./props/type";
-import ProximaNova from "../../resources/fonts/proximaNova";
-import fullWidth from "./props/fullWidth";
-import shadow from "./props/shadow"
+import ButtonWidth from "./props/fullWidth";
+import ButtonShadow from "./props/shadow";
+import ButtonGradient from "./props/gradient";
 
 const Button = Styled.button.attrs(props => ({
   disabled: props.disable
@@ -11,8 +12,9 @@ const Button = Styled.button.attrs(props => ({
   ${ProximaNova}
   ${ButtonSize}
   ${ButtonType}
-  ${fullWidth}
-  ${shadow}
+  ${ButtonWidth}
+  ${ButtonShadow}
+  ${ButtonGradient}
 `;
 
 export default Button;

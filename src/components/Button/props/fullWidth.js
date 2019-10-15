@@ -1,7 +1,7 @@
 const fullWidth = (props) => {
     if(props.fullWidth){
-        let jontas = `width:100%;`;
-        return jontas
+        let width = `width:100%;`;
+        return width;
     }
     return false;
 }

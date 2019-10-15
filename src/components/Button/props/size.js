@@ -7,7 +7,7 @@ const ButtonSize = (props) => {
         props.size = sizeButton;
     }
 
-    let jontas = `
+    let btnSize = `
         cursor:pointer;
         transition:0.2s all;
         outline:none;
@@ -26,7 +26,7 @@ const ButtonSize = (props) => {
         text-rendering: optimizeLegibility;
     `;
     
-    return jontas;
+    return btnSize;
 }
 
 export default ButtonSize;
