@@ -7,7 +7,6 @@ const ButtonSize = (props) => {
         props.size = sizeButton;
     }
 
-
     let jontas = `
         cursor:pointer;
         transition:0.2s all;
@@ -26,6 +25,7 @@ const ButtonSize = (props) => {
         min-width: ${props.size ? Size[props.size].minWidth : Size.medium.minWidth};
         text-rendering: optimizeLegibility;
     `;
+    
     return jontas;
 }
 

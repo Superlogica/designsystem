@@ -1,9 +1,9 @@
-import Colors from "../resources/color";
+import Colors from "../../../resources/color";
 import fontColor from "../../../resources/functions/fontColor";
 import newColor from "../../../resources/functions/hoverColor";
 /** import Gradient from "../resources/gradient"; NUNCA VAO USAR*/
 
-const ButtonColor = (type,color)=>{
+const ButtonColor = (type,color,shadow = "")=>{
     /**valida se a props bgColor foi setada */
     var style;
     switch(type){
@@ -23,6 +23,7 @@ const ButtonColor = (type,color)=>{
                 &:hover{
                     background:${Colors[color]};
                     color:${fontColor(Colors[color])};
+                    ${shadow ? 'transform: translateY(-2px);':""}
                   }
                `;
        break;
@@ -32,6 +33,7 @@ const ButtonColor = (type,color)=>{
                  border:1px solid transparent;
                  &:hover{
                      background-color: ${Colors.neutral700};
+                     ${shadow ? 'transform: translateY(-2px);':""}
                  }
                     `;
     
@@ -41,6 +43,7 @@ const ButtonColor = (type,color)=>{
                      border:1px solid transparent;
                      &:hover{
                         background-color: ${newColor(Colors[color])}
+                        ${shadow ? 'transform: translateY(-2px);':""}
                      }
                     `;
             if(color.search('gradient')>-1) {
@@ -65,7 +68,7 @@ const ButtonType = (props) => {
             color = props.color;
         }
     }
-    let style = ButtonColor(type,color);
+    let style = props.shadow ? ButtonColor(type,color,props.shadow) : ButtonColor(type,color);
     let jontas = `
         ${style}
         &:disabled{

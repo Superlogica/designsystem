@@ -1,4 +1,3 @@
-//"#IFNDEF MOBILE";
 const newColor = (color) =>{
     let total = 0;
     let hexa = color.replace('#', '');
@@ -9,24 +8,24 @@ const newColor = (color) =>{
         return false;
     });
     let media = total / 3;
+
+    //GERANDO O HOVER - RGB TO HEXADECIMAL
+    var hover = rgb.map((jonta) => {
+        jonta = parseInt(jonta, 16);
+        jonta = (jonta>=235?jonta: jonta + 20).toString(16);
+        return jonta;
+    });
+
     if (media > 128) { 
-        let hover = rgb.map((jonta) => {
+        hover = rgb.map((jonta) => {
             jonta = parseInt(jonta, 16);
             jonta = (jonta <= 20 ? jonta : jonta - 20).toString(16);
             return jonta;
         });
-        hover = `#${hover[0]+hover[1]+hover[2]}`;
-        return hover;
-    } else {
-        let hover = rgb.map((jonta) => {
-            jonta = parseInt(jonta, 16);
-            jonta = (jonta>=235?jonta: jonta + 20).toString(16);
-            return jonta;
-        });
-        hover = `#${hover[0]+hover[1]+hover[2]}`;
-        return hover;
     }
+
+    hover = `#${hover[0]+hover[1]+hover[2]}`;
+    return hover;
 }
 
 export default newColor;
-//"#ENDIF";

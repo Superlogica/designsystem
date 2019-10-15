@@ -6,13 +6,16 @@ const setColor = (hexa) =>{
             jontas = parseInt(jontas,16);
             total = total + jontas
             return jontas;
-        });    
+        });
+
+        let color = "#FFFFFF";
         let media = total / 3;
-        if(media >150){
-            return "#1e232c";
-        }else{
-            return "#FFFFFF";
+
+        if(media > 150){
+            color = "#1e232c";
         }
+
+        return color;
     }
 
 export default setColor;
