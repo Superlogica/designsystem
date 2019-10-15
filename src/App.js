@@ -14,54 +14,54 @@ class App extends React.Component {
     let id = event.target.id;
   }
 
-  handleSubmit = () =>{
+  handleSubmit = () => {
     console.log(this.state);
   }
 
-  render(){
+  render() {
     const marginTeste = {
       marginBottom: "10px"
     }
 
     return (
       <Container>
-        <div className="App">             
-              <Row>
-                <Col>
-                  <Button color="purple" fullWidth disable size="small" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-                <Col>
-                  <Button color="purple" fullWidth size="small" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="purple" fullWidth disable size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-                <Col>
-                  <Button color="purple" fullWidth size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="purple" fullWidth disable size="large" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-                <Col>
-                  <Button color="purple" fullWidth size="large" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-              </Row>
-              <Row>
-                <Col>
-                  <Button color="purple" fullWidth disable size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-                <Col>
-                  <Button color="purple" fullWidth size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
-                </Col>
-              </Row>
-              
-            <p>
-              Decimal: { this.props.decimalColor }
-            </p>
+        <div className="App">
+          <Row>
+            <Col>
+              <Button color="purple" disable size="small" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+            <Col>
+              <Button color="purple" fullWidth size="small" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button color="purple" çdisable size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+            <Col>
+              <Button color="purple" fullWidth size="medium" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button color="purple" fullWidth disable size="large" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+            <Col>
+              <Button color="purple" fullWidth size="large" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button color="purple" fullWidth disable size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+            <Col>
+              <Button color="purple" fullWidth size="xlarge" style={marginTeste} onClick={this.handleSubmit}>Solid Button</Button>
+            </Col>
+          </Row>
+
+          <p>
+            Decimal: {this.props.decimalColor}
+          </p>
         </div>
       </Container>
     );
